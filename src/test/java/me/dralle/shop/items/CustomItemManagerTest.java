@@ -202,6 +202,7 @@ class CustomItemManagerTest {
 
         Fixture() throws Exception {
             when(plugin.getName()).thenReturn("GeniusShop");
+            when(plugin.namespace()).thenReturn("geniusshop");
             when(plugin.getMessages().getMessage(anyString())).thenReturn("message");
             manager = new CustomItemManager(plugin, selling);
             definition(CustomItemDefinition.ActionType.COMMAND, "right-click-air");
